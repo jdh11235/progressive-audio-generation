@@ -16,13 +16,16 @@
 	<h1>Progressive Audio Generation</h1>
 	<h2>Experiments by Jonathan Herman</h2>
 
+	<p>You may need to adjust your volume.</p>
+	<p>If the sound doesn't work, make sure you're using a modern desktop web browser like Chrome or Firefox.</p>
+
 	<hr>
 
 	<button onclick="
 		Music.stopLoops();
 	">stop all</button>
 
-	<p>random note loops:</p>
+	<p>Random single note loops:</p>
 
 	<button onclick="
 		Music.loopDiatonic('piano', 5, 1/2);
@@ -36,7 +39,7 @@
 		Music.loopDiatonic('piano', 5, 1/8);
 	">eighth</button>
 
-	<p>two-track random loop:</p>
+	<p>Two part random loop:</p>
 
 	<button onclick="
 		Music.loopDiatonic('organ', 4, 1/2);
@@ -48,7 +51,7 @@
 		Music.loopDiatonic('organ', 3, 3/8);
 	">five against eight</button>
 
-	<p>pentatonic chords:</p>
+	<p>Random pentatonic chords:</p>
 
 	<button onclick="
 		Music.loopPentatonic('organ', 4, 1/2);
@@ -72,7 +75,7 @@
 		Music.loopPentatonic('organ', 3, 1/2);
 	">four notes</button>
 
-	<p>add custom tracks (beats per second):</p>
+	<p>Add custom random tracks (beats per second):</p>
 
 	<button onclick="
 		Music.loopDiatonic('piano', 3, 3/1);
