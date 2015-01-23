@@ -5,12 +5,6 @@ Array.prototype.random = function () {
 
 var Music = {
 
-	stopLoops: function () {
-		while (Music.loops.length > 0) {
-			clearInterval(Music.loops.pop());
-		}
-	},
-
 	loopPentatonic: function (instrument, octave, speed) {
 		//overlap notes by 1.5
 		Music.loops.push(setInterval(function () {
@@ -41,6 +35,12 @@ var Music = {
 		console.log(note + octave + ' (' + instrument + ')');
 		//speed is measured in seconds
 		Synth.play(instrument, note, octave, speed);
+	},
+
+	stopLoops: function () {
+		while (Music.loops.length > 0) {
+			clearInterval(Music.loops.pop());
+		}
 	}
 
 };
