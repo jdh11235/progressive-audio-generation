@@ -22,7 +22,19 @@
 		Music.cancelLoops();
 	">stop all</button>
 
-	<br>
+	<p>random note loops:</p>
+
+	<button onclick="
+		Music.loopRandom('piano', 5, 1/2);
+	">half</button>
+
+	<button onclick="
+		Music.loopRandom('piano', 5, 1/4);
+	">quarter</button>
+
+	<button onclick="
+		Music.loopRandom('piano', 5, 1/8);
+	">eighth</button>
 
 	<p>two-track random loop:</p>
 
@@ -34,7 +46,60 @@
 	<button onclick="
 		Music.loopRandom('piano', 4, 3/5);
 		Music.loopRandom('organ', 3, 3/8);
-	">seven against eight</button>
+	">five against eight</button>
+
+	<hr>
+
+	<p>add custom tracks (beats per second):</p>
+
+	<button onclick="
+		Music.loopRandom('piano', 3, 3/1);
+	">one</button>
+
+	<button onclick="
+		Music.loopRandom('piano', 4, 3/2);
+	">two</button>
+
+	<button onclick="
+		Music.loopRandom('piano', 4, 3/3);
+	">three</button>
+
+	<button onclick="
+		Music.loopRandom('piano', 4, 3/4);
+	">four</button>
+
+	<button onclick="
+		Music.loopRandom('piano', 4, 3/5);
+	">five</button>
+
+	<button onclick="
+		Music.loopRandom('piano', 4, 3/6);
+	">six</button>
+
+	<button onclick="
+		Music.loopRandom('piano', 4, 3/7);
+	">seven</button>
+
+	<button onclick="
+		Music.loopRandom('piano', 4, 3/8);
+	">eight</button>
+
+	<button onclick="
+		Music.loopRandom('piano', 4, 3/9);
+	">nine</button>
+
+	<button onclick="
+		Music.loopRandom('piano', 4, 3/10);
+	">ten</button>
+
+	<button onclick="
+		Music.loopRandom('piano', 4, 3/11);
+	">eleven</button>
+
+	<button onclick="
+		Music.loopRandom('piano', 4, 3/12);
+	">twelve</button>
+
 
 	<hr>
 
