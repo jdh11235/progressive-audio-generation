@@ -5,20 +5,19 @@ Array.prototype.random = function () {
 
 var Music = {
 
-	instrument: 'piano',
-
-	playRandom: function(octave, speed) {
+	playRandom: function(instrument, octave, speed) {
 		var note = ['A', 'B', 'C', 'D', 'E', 'F', 'G'].random();
-		Synth.play(Music.instrument, note, octave, speed);
+		Synth.play(instrument, note, octave, speed);
 	},
 
-	loopRandom: function(octave, speed) {
+	loopRandom: function(instrument, octave, speed) {
 	//speed is in seconds
 		setInterval(function() {
-			Music.playRandom(octave, speed);
+			Music.playRandom(instrument, octave, speed);
 		}, speed * 1000);
 	}
 
 };
 
-Music.loopRandom(4, 0.5);
+Music.loopRandom('piano', 4, 1/2);
+Music.loopRandom('piano', 3, 1/3);
