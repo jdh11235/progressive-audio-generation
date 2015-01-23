@@ -3,3 +3,11 @@ body {
 	font-family: sans-serif;
 	text-align: center;
 }
+
+p {
+	text-transform: capitalize;
+}
+
+hr {
+	margin: 1em;
+}
