@@ -18,6 +18,3 @@ var Music = {
 	}
 
 };
-
-Music.loopRandom('piano', 4, 1/2);
-Music.loopRandom('piano', 3, 1/3);
