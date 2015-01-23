@@ -5,16 +5,16 @@ Array.prototype.random = function () {
 
 var Music = {
 
+	loopDiatonic: function (instrument, octave, speed) {
+		Music.loops.push(setInterval(function () {
+			Music.playDiatonic(instrument, octave, speed);
+		}, speed * 1000));
+	},
+
 	loopPentatonic: function (instrument, octave, speed) {
 		//overlap notes by 1.5
 		Music.loops.push(setInterval(function () {
 			Music.playPentatonic(instrument, octave, speed * 1.5);
-		}, speed * 1000));
-	},
-
-	loopDiatonic: function (instrument, octave, speed) {
-		Music.loops.push(setInterval(function () {
-			Music.playDiatonic(instrument, octave, speed);
 		}, speed * 1000));
 	},
 
