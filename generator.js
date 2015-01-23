@@ -26,14 +26,19 @@ var Music = {
 
 	loops: [],
 
-	playPentatonic: function (instrument, octave, speed) {
-		var note = ['A#', 'C#', 'D#', 'F#', 'G#'].random();
-		//speed is measured in seconds
-		Synth.play(instrument, note, octave, speed);
+	playDiatonic: function (instrument, octave, speed) {
+		var note_selection = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
+		Music.playRandom(note_selection, instrument, octave, speed);
 	},
 
-	playDiatonic: function (instrument, octave, speed) {
-		var note = ['A', 'B', 'C', 'D', 'E', 'F', 'G'].random();
+	playPentatonic: function (instrument, octave, speed) {
+		var note_selection = ['A#', 'C#', 'D#', 'F#', 'G#'];
+		Music.playRandom(note_selection, instrument, octave, speed);
+	},
+
+	playRandom: function (note_selection, instrument, octave, speed) {
+		var note = note_selection.random();
+		console.log(note + octave + ' (' + instrument + ')');
 		//speed is measured in seconds
 		Synth.play(instrument, note, octave, speed);
 	}
